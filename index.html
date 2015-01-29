@@ -3,9 +3,11 @@
   <head>
       <meta charset="utf-8">
       <title>Kitsudar's Portfolio</title>
+      <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
       <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,300italic' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/main.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script> 
         var page = 'index'; 
       </script>
@@ -19,7 +21,6 @@
             somchana<br />
             design</p></div>
             <ul class="nav">
-              <ul>
                 <li><a href="about.html">about me</a></li>
                 <li><a href="portfolio.html">my work</a></li>
                 <li><a href="resume.html">resume</a></li>
@@ -70,50 +71,61 @@
             <p>Web Languages: HTML, CSS, working knowledge of jQuery, Javascript, and SASS.</p>
           <h4>EXPERIENCE</h4>
             <p>RTD, Denver, CO | 2013 - present</p>
-            <em>Graphic/web designer</em>
+            <em>Graphic/web designer</em><button class="js-expander">Expand</button>
+            <div class="js-expandable">
             <p>I was involoved in the transit expansion projects of the West Rail Line in 2013 and Union Station in 2014. Our team sucessfully strategized marketing efforts to create public awareness of two massive opening in a limited amount of time. Both marketing campaigns won APTA awards.</p>
             <ul>
               <li>During the Union Station opening, I took on two of the three special events branding projects. I was able to come up with unique invitations and printed materials in a limited time frame.</li>
               <li>As a long term project, I was tasked with redesigning the printed schedules. There are over 150 schedules. Through research, I have sucessfully designed a clean, modern and functional schedule.</li>
-            </ul>
+            </ul></div>
 
+            <hr>
             <p>Hogan Lovells, Denver, | CO 2011 – 2012</p>
-            <em>Contract designer</em>
+            <em>Contract designer</em><button class="js-expander">Expand</button>
+            <div class="js-expandable">
             <p>Responsible for the design of graphic applications such as collateral material, custom proposal graphics, ads, info sheets, custom invitations, signage, firm publications, and electronic invites and communications.</p>
             <ul>
               <li>Successfully worked remotely along side a designer in Washington, D.C. and a creative director in New York.</li>
               <li>Collaborated with various clients: marketing team members, lawyers, support staff, and designers.</li>
               <li>Designed HTML emails, announcements and e-newsletter campaigns.</li>
-            </ul>
+            </ul></div>
 
+            <hr>
             <p>MoneyGram, Lakewood, CO | 2009 - 2011</p>
-            <em>Contract designer</em>
+            <em>Contract designer</em><button class="js-expander">Expand</button>
+            <div class="js-expandable">
             <p>I supported the marketing department by creating media such as direct mail, advertisements, brochures, presentations, signage, promotional materials and collaterals as needed. Acted as a liaison between the Denver and Dallas offices during relocation transition.</p>
             <ul>
               <li>Developed campaign for Mother’s Day 2011 that was used in multiple media including TV, Radio and print.</li>
               <li>Worked with Wal-Mart branding style guide to generate art work for MoneyGram services at Wal-Mart locations.</li>
               <li>Designed point of sale piece for the launch of a new service of transfer debit cards that were to be used at International MoneyGram locations.</li>
-            </ul>
+            </ul></div>
 
+            <hr>
             <p>Munchkin, Inc. North Hills, CA | 2006 – 2011</p>
-            <em>Graphic Designer</em>
+            <em>Graphic Designer</em><button class="js-expander">Expand</button>
+            <div class="js-expandable">
             <p>As a designer, I worked alongside 2 in house designers as well as designers in our Hong Kong office to help produce print and packaging for baby and pet products. Projects included annual sales catalog, packaging designs, tradeshow materials and sales presentations.</p>
             <ul>
               <li>Collaborated with marketing, sales and product development team to support all company creative needs.</li>
               <li>Attended and art directed product photoshoots, worked with photographer, models and client.</li>
               <li>Redesigned annual sales catalog, worked with a freelancer to get the catalog produced in a limited amount of time.</li>
               <li>Worked with client’s licensed branding teams such as Nickelodeon, Disney and Sesame Street to generate franchise driven packaging and products.</li>
-            </ul>
+            </ul></div>
 
+            <hr>
             <p>Patina Group, Los Angeles, CA | 2005 - 2006</p>
-            <em>Graphic Designer</em>
-            <p>I worked alongside the marketing team to help maintain Patina Group’s unique upscale dining experience at landmark locations in Los Angeles and New York. Created various materials for Restaurant Associates + Patina Group such as menus, promotional mailers, sales sheets and catalogs. Negotiated and maintained printing cost, reviewed and attend the final press-checks.</p>
+            <em>Graphic Designer</em><button class="js-expander">Expand</button>
+            <div class="js-expandable">
+            <p>I worked alongside the marketing team to help maintain Patina Group’s unique upscale dining experience at landmark locations in Los Angeles and New York. Created various materials for Restaurant Associates + Patina Group such as menus, promotional mailers, sales sheets and catalogs. Negotiated and maintained printing cost, reviewed and attend the final press-checks.</p></div>
 
+            <hr>
           <h4>EDUCATION</h4>
             <p>University of Denver</p>
             <em>Graducate Certificate, Advanced Study in Web Design and Development 2014 - 2016 (expected)</em>
             <p>California State University of Long Beach</p>
             <em>Bachelor of Fine Arts (BFA), Graphic Design 2000 - 2004</em>
+
 
       </section>
 
@@ -147,6 +159,7 @@
         </footer>
 
       <script src="js/header.js"></script>
+      <script src="js/resume.js"></script>
 
 
   </body>
