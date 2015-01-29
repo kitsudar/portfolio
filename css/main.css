@@ -2,6 +2,10 @@
 GENERAL
 ***********************************/
 
+/** *:before, *:after{
+	box-sizing: border-box;
+}*/
+
 body {
 	margin: 0 auto;
 	padding: 0;
@@ -42,6 +46,8 @@ HEADING
 
 .myname {
 	display: inline-block;
+	vertical-align: top;
+	padding-top: 50px;
 	font-size: 1.2em;
 }
 
@@ -78,9 +84,9 @@ HEADING
 	transition: all 0.5s ease;
 }
 
-.nav a:hover, 
-
-.nav a.focus {
+.nav a:hover,
+.nav a.focus,
+.nav a.selected {
 	color: #D04E1C;
 	margin: 1em 0 1em;
 }
@@ -91,13 +97,15 @@ WELCOME
 
 
 .welcome {
-	background-image: url(../img/bg1.jpg);
+	background-image: url(../img/bg3.jpg);
 	-webkit-background-size: cover;
 	 -moz-background-size: cover;
 	 -o-background-size: cover;
 	 background-size: cover;
+	 background-repeat: no-repeat;
+	 background-position: center;
 	 text-align: center;
-	 min-height: 500px;
+	 min-height: 450px;
 }
 
 
@@ -179,14 +187,41 @@ RESUME
 
 .resume {
 	width: 1000px;
-	max-width: 75%;
+box-sizing: border-box;
 	margin: 0 auto;
+	padding-right: 13%;	
 }
 
 .resume p em {
 	margin: 0 auto;
 }
 
+.resume em {
+	padding-right: 10px;
+}
+
+.resume hr {
+	margin: 1em 0 1em;
+}
+
+.js-expander {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 1em;
+	width: 1em;
+	text-indent: -9999px;
+
+}
+.js-expander:focus {
+	outline: 0;
+}
+.js-expander[aria-expanded='false'] {
+	background: url('./../img/plus.jpg') no-repeat;
+}
+.js-expander[aria-expanded='true'] {
+	background: url('./../img/minus.jpg') no-repeat;
+}
 /**********************************
 STICKY FOOTER
 ***********************************/
