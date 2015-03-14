@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
       <meta charset="utf-8">
@@ -7,29 +7,29 @@
       <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700,300italic' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/normalize.css">
       <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="css/parsley.css">
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script> 
-        var page = 'index'; 
-      </script>
+
   </head>
 
   <body>
       <div class="header-cont">
         <header class="nav">
-            <!-- <div class="logo"><a href="index.html"><img src="img/kd_logo.png" alt="Kitsudar Design logo"></a></div>
+            <div class="logo"><a data-scroll-nav="0" href="index.html"><img src="img/kd_logo.png" alt="Kitsudar Design logo"></a></div>
             <div class="myname"><p>kitsudar<br />
             somchana<br />
             design</p></div>
             <ul class="nav">
-                <li><a href="about.html">about me</a></li>
-                <li><a href="portfolio.html">my work</a></li>
-                <li><a href="resume.html">resume</a></li>
-                <li><a href="contact.html">contact me</a></li>
+                <li><a data-scroll-nav="1" href="about.html">about me</a></li>
+                <li><a data-scroll-nav="2" href="portfolio.html">my work</a></li>
+                <li><a data-scroll-nav="3" href="resume.html">resume</a></li>
+                <li><a data-scroll-nav="4" href="contact.html">contact me</a></li>
                 <li><a href="blog.html">blog</a></li>
-              </ul> -->
+              </ul>
           </header>
         </div>
 
+    <div data-scroll-index="0">
       <section class="welcome">
         <h1>welcome to my portfolio site</h1><br />
           <div class="icon"><img src="img/iconbrush.png" alt="Computer Screen with Brush Icon" />
@@ -41,29 +41,34 @@
           <div class="icon"><img src="img/iconwheel.png" alt="Window with Wheel Icon" />
           <p>semantic</p></div>
       </section>
+    </div>
 
+    <div data-scroll-index="1">
       <section class="about">
         <h2>about me</h2>
         <img src="img/profile_pic.jpg" alt="Kitsudar's profile picture">
         <p>Hello. My name is Kitsudar (it's Thai in case you're wondering), I go by "Kit" for short too. I'm a fulltime/freelance designer based in Denver, Colorado. By day I work as a designer at RTD, a public transportation company doing creative, award-winning marketing campaigns. By (early) night, I hang out with my twin toddlers and husband. When all is quiet, I get to crank my creative juices on personal or freelance projects.<br />
         I'm always looking for new creative opportunities, including pro bono/non-profit. Please drop me a line to get in touch or just to say "Hi".</p>
       </section>
+    </div>
 
+    <div data-scroll-index="2">
       <section class="mywork">
         <h2>my work</h2>
-          <div class="flex-container">
-            <div class="flex-item"><img src="img/employee_event.jpg" alt="Employee Event Invitation"></div>
-            <div class="flex-item"><img src="img/biketowork.jpg" alt="Logo for Bike to Work Day"></div>
-            <div class="flex-item"><img src="img/zcard.jpg" alt="Map card for West Rail Line"></div>
-            <div class="flex-item"><img src="img/daravadeespa.jpg" alt="Daravadee Spa Website"></div>
-            <div class="flex-item"><img src="img/HL_Lawyer.jpg" alt="Hogan Lovell Lawyer Developement Booklet"></div>
-            <div class="flex-item"><img src="img/gala_event.jpg" alt="Union Station Gala Event Invitation"></div>
-            <div class="flex-item"><img src="img/stars_strikes.jpg" alt="Stars and Strikes bowling event"></div>
-            <div class="flex-item"><img src="img/iamfastracks.jpg" alt="I am FasTracks Campaign"></div>
-            <div class="flex-item"><img src="img/moneyroll.jpg" alt="Mother's Day Campaign"></div>
+          <div class="portfolio">
+            <div class="port"><img src="img/employee_event.jpg" alt="Employee Event Invitation"></div>
+            <div class="port"><img src="img/biketowork.jpg" alt="Logo for Bike to Work Day"></div>
+            <div class="port"><img src="img/zcard.jpg" alt="Map card for West Rail Line"></div>
+            <div class="port"><img src="img/daravadeespa.jpg" alt="Daravadee Spa Website"></div>
+            <div class="port"><img src="img/HL_Lawyer.jpg" alt="Hogan Lovell Lawyer Developement Booklet"></div>
+            <div class="port"><img src="img/gala_event.jpg" alt="Union Station Gala Event Invitation"></div>
+            <div class="port"><img src="img/stars_strikes.jpg" alt="Stars and Strikes bowling event"></div>
+            <div class="port"><img src="img/iamfastracks.jpg" alt="I am FasTracks Campaign"></div>
+            <div class="port"><img src="img/moneyroll.jpg" alt="Mother's Day Campaign"></div>
           </div>
       </section>
-
+    </div>
+    <div data-scroll-index="3">
       <section class="resume">
         <h2>resumé</h2>
           <h4>SKILLS</h4>
@@ -128,38 +133,57 @@
 
 
       </section>
+    </div>
 
+    <div data-scroll-index="4">
       <section class="form">
+        <form name="ajaxform" id="ajaxform" method="POST" action="signup" data-parsley-validate>
         <h2>contact me</h2>
-        <form action="/analysis.php" method="POST">
-          <label for="nameField">
-          <p>Your Name:</p>
-          </label>
-          <input id="nameField" type="text" name="userName" placeholder="Your Full Name" />
-          <label for="emailField"><p>Your Email:</p></label>
-          <input id="emailField" type="text" name="emailAddress" placeholder="Valid Email Address" />
-        <textarea id="message" name="message" placeholder="Your message to me"></textarea>
+<!--         <form action="/analysis.php" method="POST"> -->
+          <label for="nameField">Your Name:</label>
+          <input id="nameField" type="text" name="userName" placeholder="Your Full Name" required />
+
+          <label for="email">Your Email:</label>
+          <input type="email" type="text" name="email" placeholder="Valid Email Address" data-parsley-trigger="change" required />
+
+          <textarea id="message" name="message" placeholder="Your message to me" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-validation-threshold="10" data-parsley-minlength-message = "Come on! You need to enter at least a 20 caracters long comment.."></textarea>
           <br />
-        </form>
-        <select name="Reason">
+
+        <select id="reason">
           <option>Work Inquiry</option>
           <option>General Inquiry</option>
           <option>Other</option>
         </select><br />
         <input type="checkbox"> Subscribe to be on my email list.</input><br />
-        <input class="button" type="submit" value="submit" />
+        <input id="button" type="submit" value="submit" />
+      </form>
+            <div class="successmessage"></div>
       </section>
+    </div>
+
+    <div id="name"><p>#7 Make use of the HTML5 local storage API</p>
+      <input class="button" type="submit" value="Display name" />
+    </div>
 
         <footer class="site-footer">
-          <!-- <a href="https://www.linkedin.com/in/kitsudar" target="_blank"><img src="./img/linkedin.png" alt="LinkedIn Logo" class="social-icon"></a>
+          <a href="https://www.linkedin.com/in/kitsudar" target="_blank"><img src="./img/linkedin.png" alt="LinkedIn Logo" class="social-icon"></a>
             <a href="http://facebook.com/kitsudar"><img src="./img/facebook.png" alt="Facebook Logo" class="social-icon"></a>
             <a href="http://instagram.com/kitsudar" target="_blank"><img src="./img/instagram.png" alt="Instagram Logo" class="social-icon"></a>
 
-            <p>&copy; 2015 Kitsudar Somchana Design. All rights reserved.</p> -->
+            <p>&copy; 2015 Kitsudar Somchana Design. All rights reserved.</p><div class="footerip">IP Address: </div>
         </footer>
 
-      <script src="js/header.js"></script>
+      <!-- <script src="js/header.js"></script> -->
       <script src="js/resume.js"></script>
+      <script src="js/scrollIt.js"></script>
+      <script src="js/scroll.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/parsley.js"></script>
+
+      <script type="text/javascript">
+        $('#ajaxform').parsley();
+      </script>
+
 
 
   </body>

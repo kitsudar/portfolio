@@ -20,6 +20,11 @@ h2 {
 	color: #D04E1C;
 }
 
+section {
+	padding-top: 30px;
+	height: 1000px;
+}
+
 /**********************************
 HEADING
 ***********************************/
@@ -96,6 +101,7 @@ WELCOME
 ***********************************/
 
 
+
 .welcome {
 	background-image: url(../img/bg3.jpg);
 	-webkit-background-size: cover;
@@ -105,7 +111,7 @@ WELCOME
 	 background-repeat: no-repeat;
 	 background-position: center;
 	 text-align: center;
-	 min-height: 450px;
+	 height: 500px;
 }
 
 
@@ -141,6 +147,8 @@ ABOUT
 	margin: 0 auto;
 	margin-top: 50px;
 	min-height: 350px;
+	padding-top: 100px;
+	padding-bottom: -60px;
 }
 
 .about img {
@@ -168,16 +176,20 @@ MY WORK
 	margin: 0 auto;
 }
 
-.flex-container {
+/*.flex-container {
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	justify-content: space-around;
-}
+}*/
 
-.flex-item {
+.port {
 	width: 300px;
 	height: 200px;
-	margin-bottom: 20px;
+	display: inline;
+}
+
+.mywork img {
+	padding: 15px;
 }
 
 
@@ -321,16 +333,17 @@ article p {
 
 
 /**********************************
-FORM
+CONTACT ME
 ***********************************/
 
-/* ###### White / Pink #########*/
+
 .form {
 	width: 1000px;
 	max-width: 75%;
 	margin: 0 auto;
 	margin-top: 50px;
 	text-align: left;
+	height: 600px;
 }
 
 .form p {
@@ -339,11 +352,11 @@ FORM
 	text-align: left;
     display: block;
     color: #969696;
-    margin: 0 auto;
 }
 
 .form label {
     display: block;
+    margin-top: 10px;
 }
 
 .form input[type="text"], .form input[type="email"], .form textarea,.form select{
@@ -352,9 +365,9 @@ FORM
     padding: 3px 0px 3px 5px;
     margin-top: 2px;
     margin-right: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     border: 1px solid #e5e5e5;
-    background: #fbfbfb;
+/*    background: #fbfbfb;*/
     height: 25px;
     line-height:15px;
     outline: 0;
@@ -366,8 +379,9 @@ FORM
     height:100px;
     padding: 5px 0px 0px 5px;
     width: 50%;
+    margin-top: 20px;
 }
-.form .button {
+#button {
     -moz-box-shadow:inset 0px 1px 0px 0px #D04E1C;
     -webkit-box-shadow:inset 0px 1px 0px 0px #D04E1C;
     box-shadow:inset 0px 1px 0px 0px #D04E1C;
@@ -415,5 +429,50 @@ FORM
     line-height: 15px;
     height: 30px;
 }
+
+/**********************************
+DISPLAY NAME
+***********************************/
+
+#name {
+	width: 1000px;
+	max-width: 100%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+
+
+
+/**********************************
+GALLERY
+***********************************/
+
+#gallery {
+	width: 1000px;
+	max-width: 75%;
+	margin: 0 auto;
+	margin-top: 50px;
+
+	height: 1200px;
+}
+
+#images { 
+/*	height: 185px; 
+	width: 240px; */
+	float: left;
+	margin: 0 auto;
+
+	padding: 5px; 
+
+}
+
+#images img { 
+	border:none;
+	float: left;
+	padding: 10px;
+}
+
+
 
 
